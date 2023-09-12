@@ -5,7 +5,7 @@ author: Jimmy Debe
 discussions-to: 
 status: Draft
 type: Interface
-category 
+category:
 created: (2023/09/05)
 
 ---
@@ -27,7 +27,7 @@ The future of blockchains will have millions of blockchains that carry all kinds
 #### getPref
 > - Get the preference bytes32 hash
 ```yaml
-- name: getPref
+- name : getPref
 	type: function
 	stateMutability: view
 	inputs:
@@ -72,7 +72,7 @@ The future of blockchains will have millions of blockchains that carry all kinds
 #### didInfo
 > - Get the DID URL
 ```yaml
-- name: didInfo
+- name : didInfo
 	type: function
 	stateMutability: view
 	inputs:
