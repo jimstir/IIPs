@@ -26,18 +26,18 @@ The future of blockchains will have millions of blockchains that carry all kinds
 
 #### getPref
 > - Get the preference bytes32 hash
-```yaml
+   ```yaml
 - name : getPref
 	type: function
 	stateMutability: view
-inputs:
-	- name: id
-	type: int
-outputs:
-	- name: _userPref
-	type: String
+	inputs:
+		- name: id
+		type: int
+	outputs:
+		- name: _userPref
+		type: String
 
-```
+   ```
 
 #### getActivityPref
 > - Get the activity link stored in token URI
