@@ -30,12 +30,12 @@ The future of blockchains will have millions of blockchains that carry all kinds
 - name : getPref
 	type: function
 	stateMutability: view
-	inputs:
-		- name: id
-		type: int
-	outputs:
-		- name: _userPref
-		type: String
+inputs:
+	- name: id
+	type: int
+outputs:
+	- name: _userPref
+	type: String
 
 ```
 
