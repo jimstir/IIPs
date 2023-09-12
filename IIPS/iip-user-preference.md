@@ -17,7 +17,7 @@ created: (2023/09/05)
 Identity management interface with cross chain capabilities. Each identity can set preferences that are readable from multiple blockchains.
 
 ## Abstract
-
+Blockchains storing data should be available to Web3 apps requards less if the dApp supports the network. When cross-chain interoperability becomes common across hundreds of blockchains, dApps that support different blockchain networks can support sharing of user data preferences that are linked on the blockchain.
 
 ## Motivation
 The future of blockchains will have millions of blockchains that carry all kinds of data. Blockchains communicating with one another will be similar to the current distributed systems. Users should have a way for other blockchains to know what preferences the user wants depending on the web3 application. To achieve this there can be identity contracts that keeps track of identities and their preferences. Once users have an established preference they should be able be able to allow web3 apps to access the preferences from the blockchain. The use of preferences is important to protect user data that could be stored off chain.
@@ -26,7 +26,7 @@ The future of blockchains will have millions of blockchains that carry all kinds
 
 #### getPref
 > - Get the preference bytes32 hash
-  ```yaml
+```yaml
   - name: getPref
 	type: function
 	stateMutability: view
@@ -37,10 +37,10 @@ The future of blockchains will have millions of blockchains that carry all kinds
 	outputs:
 		-name:_userPref
 		type: String
-  ```
+```
 #### getActivityPref
 > - Get the activity link stored in token URI
-  ```yaml
+```yaml
   - name: getActivityPref
 	type: function
 	stateMutability: view
@@ -51,11 +51,11 @@ The future of blockchains will have millions of blockchains that carry all kinds
 	outputs:
 		-name:tokenURI
 		type: String
-  ```
+```
 
 #### approvedAccess
 > - Get the approved addresses for this issuer
-  ```yaml
+```yaml
   -name: approvedAccess
 	type: function
 	stateMutability: view
@@ -66,10 +66,10 @@ The future of blockchains will have millions of blockchains that carry all kinds
 	outputs:
 		-name: approveId
 		type: bool
-  ```
+```
 #### didInfo
 > - Get the DID URL
-  ```yaml
+```yaml
   -name: didInfo
 	type: function
 	stateMutability: view
@@ -80,30 +80,28 @@ The future of blockchains will have millions of blockchains that carry all kinds
 	outputs:
 		-name: _didInfo
 		type: String
-  ```
+```
 
 #### addPref
 > - Add preference for a user, should link to user preference
-  ```yaml
+```yaml
   -name: addPref
 	type: function
 	stateMutability: nonpayable
-
 	inputs:
 		-name: pref
 		type: byte
 	outputs:
 		[ ]
 
-  ```
+```
 #### addParty
 > - Approve addresses to use activityMint
 
-  ```yaml
+```yaml
   -name: addParty
 	type: function
 	stateMutability: nonPayable
-
 	inputs:
 		-name: user
 		type: address
@@ -112,14 +110,13 @@ The future of blockchains will have millions of blockchains that carry all kinds
 	outputs:
 		[ ]
 
-  ```
+```
 #### activityMint
 > - Mint token for each activity
-  ```yaml
+```yaml
   -name: activityMint
 	type: function
 	stateMutability: nonpayable
-
 	inputs:
 		-name: from
 		type: address
@@ -129,31 +126,27 @@ The future of blockchains will have millions of blockchains that carry all kinds
 		type: String
 	outputs:
 		[ ]
-
-  ```
+```
 #### handleCallMessage
 > - Handle xCall message call
-  ```yaml
+```yaml
   -name: handleCallMessage
 	type: function
 	stateMutability: nonpayable
-
 	inputs:
 		-name: _from
 		type: string
 		-name: data
 		type: Class 
-	
 	outputs:
 		-name: getPref
 		type: String
 		-name: activityMint
 		type: String
 		- name:revert
-		type: revert 
+		type: revert
 
-  ```
-
+```
 
 ### Interacting With Contracts
 
