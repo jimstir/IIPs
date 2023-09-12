@@ -27,126 +27,133 @@ The future of blockchains will have millions of blockchains that carry all kinds
 #### getPref
 > - Get the preference bytes32 hash
 ```yaml
-  - name: getPref
+- name: getPref
 	type: function
 	stateMutability: view
-
-	inputs: 
+	inputs:
 		- name: id
 		type: int
 	outputs:
-		-name:_userPref
+		- name: _userPref
 		type: String
+
 ```
+
 #### getActivityPref
 > - Get the activity link stored in token URI
 ```yaml
-  - name: getActivityPref
+- name: getActivityPref
 	type: function
 	stateMutability: view
-
 	inputs: 
 		- name: user
 		type: address
 	outputs:
-		-name:tokenURI
+		- name: tokenURI
 		type: String
+
 ```
 
 #### approvedAccess
 > - Get the approved addresses for this issuer
 ```yaml
-  -name: approvedAccess
+- name: approvedAccess
 	type: function
 	stateMutability: view
-
 	inputs:
-		-name: user
+		- name: user
 		type: address
 	outputs:
-		-name: approveId
+		- name: approveId
 		type: bool
+
 ```
+
 #### didInfo
 > - Get the DID URL
 ```yaml
-  -name: didInfo
+- name: didInfo
 	type: function
 	stateMutability: view
-
 	inputs:
-		-name: user
+		- name: user
 		type: address
 	outputs:
-		-name: _didInfo
+		- name: _didInfo
 		type: String
+
 ```
 
 #### addPref
 > - Add preference for a user, should link to user preference
 ```yaml
-  -name: addPref
+- name: addPref
 	type: function
 	stateMutability: nonpayable
 	inputs:
-		-name: pref
+		- name: pref
 		type: byte
 	outputs:
 		[ ]
 
 ```
+
 #### addParty
 > - Approve addresses to use activityMint
 
 ```yaml
-  -name: addParty
+- name: addParty
 	type: function
 	stateMutability: nonPayable
+
 	inputs:
-		-name: user
+		- name: user
 		type: address
-		-name: uri
+		- name: uri
 		type: String
 	outputs:
 		[ ]
 
 ```
+
 #### activityMint
 > - Mint token for each activity
 ```yaml
-  -name: activityMint
+- name: activityMint
 	type: function
 	stateMutability: nonpayable
 	inputs:
-		-name: from
+		- name: from
 		type: address
-		-name: to
+		- name: to
 		type: address
-		-name: uri
+		- name: uri
 		type: String
 	outputs:
 		[ ]
+
 ```
+
 #### handleCallMessage
 > - Handle xCall message call
-```yaml
-  -name: handleCallMessage
+  ```yaml
+- name: handleCallMessage
 	type: function
 	stateMutability: nonpayable
 	inputs:
-		-name: _from
+		- name: _from
 		type: string
-		-name: data
+		- name: data
 		type: Class 
 	outputs:
-		-name: getPref
+		- name: getPref
 		type: String
-		-name: activityMint
+		- name: activityMint
 		type: String
 		- name:revert
 		type: revert
 
-```
+   ```
 
 ### Interacting With Contracts
 
